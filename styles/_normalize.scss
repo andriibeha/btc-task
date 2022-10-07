@@ -13,6 +13,7 @@ a {
 
 * {
   box-sizing: border-box;
+  font-family: 'Nunito', Roboto, system-ui, Tahoma, sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -24,4 +25,46 @@ a {
     color: white;
     background: black;
   }
+}
+
+.list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+body li {
+  list-style-type: none;
+}
+
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+}
+
+p {
+  margin: 0px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
 }

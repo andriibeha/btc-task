@@ -1,6 +1,11 @@
+import CoinList from "../components/CoinList/CoinList";
+
+
 const Home = () => {
   return (
-    <h1>Hello</h1>
+    <>
+      <CoinList />
+    </>
   )
 };
 
