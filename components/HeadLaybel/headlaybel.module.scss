@@ -1,0 +1,18 @@
+.root {
+    color: grey;
+    margin-bottom: 15px;
+
+    &__list {
+        display: grid;
+        grid-template-columns: 50px repeat(5, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 0;
+        grid-row-gap: 0px;
+
+    }
+
+    &__item {
+        font-size: 22px;
+        font-weight: 600;
+    }
+}

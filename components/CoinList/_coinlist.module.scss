@@ -1,31 +1,36 @@
-.root { 
-    color: grey;
-    margin-bottom: 25px;
-
-    &__list {
-        display: grid;
-        grid-template-columns: 50px repeat(2, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 0;
-        grid-row-gap: 0px;
-
-    }
-
-    &__item {
-        font-size: 22px;
-        font-weight: 600;
-    }
-}
-
-.container { 
-    font-size: 22px;
-}
-
 .list  {
     display: grid;
-    grid-template-columns: 50px repeat(2, 1fr);
+    grid-template-columns: 50px repeat(5, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0;
     grid-row-gap: 0px;
+
+    font-size:  22px;
+}
+
+.item { 
+    margin-top: 20px;
+
+    &__red { 
+        color: red;
+        margin-top: 20px;
+    }
+
+    &__green { 
+        color: green;
+        margin-top: 20px;
+    }
+}
+
+.wraper { 
+    display: flex;
+    
+    b { 
+        margin-left: 15px;
+    }
+}
+
+.skeleton {
+    margin-top: 20px;
 }
 

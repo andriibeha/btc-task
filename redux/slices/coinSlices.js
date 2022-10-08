@@ -1,14 +1,20 @@
+import axios from 'axios';
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
+
 
 const initialState = {
     items: [],
+    status: 'loading',
 };
 
-const fetchCoins = createAsyncThunk(
-  'coins/fetchCoins',
-  async () => {
-    const response = await fetch(`https://api.coindesk.com/v1/bpi/currentprice.json`)
-    return response.data
+/* https://api.coinstats.app/public/v1/coins?skip=0&limit=100%C2%A4cy=INR */
+
+
+export const fetchCoins = createAsyncThunk(
+  'coins/fetchCoinsStatus',
+    async () => {
+        const { data } = await axios.get(`https://api.coinstats.app/public/v1/coins?skip=0&limit=20`);
+        return data.coins
   }
 )
 
@@ -16,20 +22,27 @@ export const coinSlices = createSlice({
     name: 'coins',
     initialState,
     reducers: {
-        getCoins(state, actions) {
-            state.items.push(actions.payload);
-        }
+        setCoins(state, action) {
+            state.items = action.payload;
+        },
     },
-    extraReducers: (builder) => {
-        builder.addCase(fetchCoins, (state, action) => {
-            // Add user to the state array
-            console.log(action.payload)
-            console.log(state)
-        })
-    }
+    extraReducers: {
+        [fetchCoins.pending]: (state, action) => {
+            state.status = 'loading';
+            state.items = [];
+        },
+        [fetchCoins.fulfilled]: (state, action) => {
+            state.items = action.payload;
+            state.status = 'success';
+        },
+        [fetchCoins.rejected]: (state, action) => {
+            state.status = 'error';
+            state.items = [];
+        },
+    },
 });
 
-export const { getCoins} = coinSlices.actions;
+export const { setCoins} = coinSlices.actions;
 
 export default coinSlices.reducer;
 
