@@ -17,7 +17,7 @@ const Skeleton = () => {
                 y="0"
                 width="100%"
                 height="100%"
-                clip-path="url(#clip-path)"
+                clipPath="url(#clip-path)"
                 fill="grey"
                 style={{ fill: "#fill" }}
             ></rect>
