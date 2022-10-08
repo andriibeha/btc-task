@@ -1,0 +1,1 @@
+(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[880],{4898:function(n,u,i){(window.__NEXT_P=window.__NEXT_P||[]).push(["/coinInfo",function(){return i(8943)}])},8943:function(n,u,i){"use strict";i.r(u);var c=i(5893),o=function(){return(0,c.jsx)("div",{children:"coinInfo"})};u.default=o}},function(n){n.O(0,[774,888,179],function(){return n(n.s=4898)}),_N_E=n.O()}]);
