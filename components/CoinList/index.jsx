@@ -1,9 +1,8 @@
-import Link from 'next/link';
-import Image from 'next/image'
 
 import s from "./_coinlist.module.scss";
 
 const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marketCap }) => {
+
     return (
         <>
             <ul className={s.list}>
@@ -12,13 +11,12 @@ const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marke
                 </li>
                 <li className={s.item}>
                     <div className={s.wraper}>
-                        <img src={icon}
+                        <img scr={icon}
                             alt="logo"
                             width="30px"
                             height="30px" />
-                        <Link href="coinInfo">
+                        
                             <b>{name}</b>
-                        </Link>
                     </div>
                 </li>
 
