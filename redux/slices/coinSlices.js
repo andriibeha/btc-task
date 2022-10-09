@@ -12,8 +12,9 @@ const initialState = {
 
 export const fetchCoins = createAsyncThunk(
   'coins/fetchCoinsStatus',
-    async () => {
-        const { data } = await axios.get(`https://api.coinstats.app/public/v1/coins?skip=0&limit=20`);
+    async (currentPage) => {
+
+        const { data } = await axios.get(`https://api.coinstats.app/public/v1/coins?skip=${currentPage}&limit=20`);
         return data.coins
   }
 )

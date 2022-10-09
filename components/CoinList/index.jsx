@@ -1,14 +1,11 @@
 
 import s from "./_coinlist.module.scss";
 
-const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marketCap, symbol }) => {
+const CoinList = ({ name, price, priceChange1d, priceChange1w, marketCap }) => {
 
     return (
         <>
             <ul className={s.list}>
-                <li className={s.item}>
-                    {rank}
-                </li>
                 <li className={s.item}>
                     <b>{name}</b>
                 </li>
