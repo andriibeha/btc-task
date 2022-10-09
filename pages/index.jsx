@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchCoins } from '../redux/slices/coinSlices';
@@ -17,7 +16,7 @@ const Home = () => {
     
   useEffect(() => {
     dispatch(fetchCoins())
-  }, [dispatch]);
+  }, [fetchCoins]);
   
   const coins = items.map((item) => <CoinList key={item.id} {...item} />);
   const skeleton = [...new Array(20)].map((_, index) => <Skeleton key={index} />);

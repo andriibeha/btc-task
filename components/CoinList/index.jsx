@@ -1,7 +1,7 @@
 
 import s from "./_coinlist.module.scss";
 
-const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marketCap }) => {
+const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marketCap, symbol }) => {
 
     return (
         <>
@@ -10,14 +10,7 @@ const CoinList = ({ name, icon, rank, price, priceChange1d, priceChange1w, marke
                     {rank}
                 </li>
                 <li className={s.item}>
-                    <div className={s.wraper}>
-                        <img scr={icon}
-                            alt="logo"
-                            width="30px"
-                            height="30px" />
-                        
-                            <b>{name}</b>
-                    </div>
+                    <b>{name}</b>
                 </li>
 
                 <li className={s.item}>
